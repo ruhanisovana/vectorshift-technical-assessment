@@ -1,0 +1,16 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body, #root { width: 100%; height: 100%; background: #0f0f10; overflow: hidden; font-family: Inter, sans-serif; }
+
+.react-flow__pane { pointer-events: all !important; }
+.react-flow__node { pointer-events: all !important; }
+.react-flow__handle { pointer-events: all !important; }
+
+input, select { 
+  pointer-events: all !important; 
+  background: #222; 
+  border: 1px solid #3a3a3b; 
+  color: white; 
+  padding: 6px; 
+  border-radius: 4px;
+  width: 100%;
+}
