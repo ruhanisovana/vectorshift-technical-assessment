@@ -10,8 +10,6 @@ export const SubmitButton = ({ nodes, edges, setNodes }) => {
 
 
   const handleSubmit = async () => {
-    alert("Button clicked");
-    console.log("Button clicked");
 
   const cleanNodes = nodes.map((n) => {
     const { setValue, ...data } = n.data;
@@ -30,7 +28,6 @@ export const SubmitButton = ({ nodes, edges, setNodes }) => {
 
   try {
 
-    alert("Before fetch");
 
     const res = await fetch(
       "https://vectorshift-technical-assessment-2.onrender.com/pipelines/parse",
@@ -42,8 +39,6 @@ export const SubmitButton = ({ nodes, edges, setNodes }) => {
         body: JSON.stringify(flow),
       }
     );
-
-    alert("After fetch");
 
     if (!res.ok) {
       throw new Error("Server Error");
