@@ -115,7 +115,11 @@ export const PipelineUI = () => {
                 defaultEdgeOptions={{ style: { stroke: '#7c3aed', strokeWidth: 2 } }}
                 fitView
             >
-                <Background color="#2a2a2b" gap={gridSize} />
+                <Background
+    color="#2d2d2d"
+    gap={24}
+    size={1}
+/>
                 <Controls />
                 <MiniMap nodeColor="#7c3aed" maskColor="rgba(0, 0, 0, 0.6)"/>
             </ReactFlow>
