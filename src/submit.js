@@ -86,21 +86,24 @@ Result : ${data.result}`
   const button = (
     <button
       onClick={handleSubmit}
-      style={{
-        position: "fixed",
-        bottom: "20px",
-        left: "50%",
-        transform: "translateX(-50%)",
-        padding: "14px 30px",
-        border: "none",
-        borderRadius: "12px",
-        background: "#7c3aed",
-        color: "white",
-        fontWeight: "bold",
-        fontSize: "16px",
-        cursor: "pointer",
-        zIndex: 9999,
-      }}
+  { 
+    style={{
+position:"fixed",
+bottom:20,
+left:"50%",
+transform:"translateX(-50%)",
+padding:"15px 38px",
+borderRadius:"12px",
+border:"none",
+background:"linear-gradient(90deg,#7c3aed,#9333ea)",
+color:"white",
+fontWeight:700,
+fontSize:"16px",
+cursor:"pointer",
+boxShadow:"0 8px 25px rgba(124,58,237,.4)",
+zIndex:9999
+}}
+
     >
       Submit Pipeline
     </button>
