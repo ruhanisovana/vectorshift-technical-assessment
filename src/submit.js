@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
-export const SubmitButton = ({ nodes, edges }) => {
+export const SubmitButton = ({ nodes, edges, setNodes }) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
