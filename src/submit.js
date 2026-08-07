@@ -75,7 +75,7 @@ Result : ${data.result}`
         boxShadow: '0 8px 24px rgba(124, 58, 237, 0.4)',
       }}
     >
-      Submit Pipeline
+      Submit 
     </button>
   );
 
