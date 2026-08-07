@@ -120,7 +120,9 @@ export const PipelineUI = () => {
     gap={24}
     size={1}
 />
-                <Controls />
+                <Controls
+showInteractive={false}
+/>
                 <MiniMap
 nodeColor="#7c3aed"
 maskColor="rgba(0,0,0,.6)"
