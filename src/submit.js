@@ -24,35 +24,28 @@ export const SubmitButton = ({ nodes, edges }) => {
     edges
   };
 
-  try {
+try {
+  alert("1");
 
-    const res = await fetch("https://vectorshift-technical-assessment-2.onrender.com/pipelines/parse", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(flow)
-    });
+  const res = await fetch("https://vectorshift-technical-assessment-2.onrender.com/pipelines/parse", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(flow)
+  });
 
-    const data = await res.json();
+  alert("2");
 
-    console.log(data);
+  const data = await res.json();
 
-    alert(
-`Nodes : ${data.num_nodes}
-Edges : ${data.num_edges}
-DAG : ${data.is_dag}
-Input : ${data.input}
-Result : ${data.result}`
-    );
+  alert("3");
 
-  } catch(err) {
+  alert(JSON.stringify(data));
 
-    console.error(err);
-
-    alert(err.message);
-
-  }
+} catch (err) {
+  alert("ERROR: " + err.message);
+}
 
 };
   const button = (
