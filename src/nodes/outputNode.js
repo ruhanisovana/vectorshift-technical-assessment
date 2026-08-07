@@ -23,7 +23,8 @@ export const OutputNode = ({ id, data }) => {
         alignItems: 'center',
         justifyContent: 'center',
         textAlign: 'center',
-        fontSize: 14,
+        fontSize: 15,
+        fontWeight: 600,
         color: 'white',
         wordWrap: 'break-word'
       }}>
