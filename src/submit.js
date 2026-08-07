@@ -44,6 +44,7 @@ export const SubmitButton = ({ nodes, edges, setNodes }) => {
     }
 
     const data = await res.json();
+    setNodes(data.nodes);
 
     console.log(data);
 
