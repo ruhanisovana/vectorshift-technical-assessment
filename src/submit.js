@@ -54,12 +54,25 @@ export const SubmitButton = ({ nodes, edges, setNodes }) => {
     alert(JSON.stringify(data, null, 2));
 console.log(data);
     
-    if (Array.isArray(data.nodes)) {
-    setNodes(data.nodes);
+   if (Array.isArray(data.nodes)) {
+
+    const updatedNodes = nodes.map((node) => {
+        const backendNode = data.nodes.find((n) => n.id === node.id);
+
+        if (!backendNode) return node;
+
+        return {
+            ...node,          // keep React Flow position
+            data: backendNode.data
+        };
+    });
+
+    setNodes(updatedNodes);
+
 } else {
     alert("Backend did not return nodes!");
     console.log(data);
-    }
+   } 
 
     console.log(data);
 
