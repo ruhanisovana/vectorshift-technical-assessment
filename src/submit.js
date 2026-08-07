@@ -86,7 +86,7 @@ Result : ${data.result}`
   const button = (
     <button
       onClick={handleSubmit}
-  { 
+  
     style={{
 position:"fixed",
 bottom:20,
