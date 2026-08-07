@@ -121,7 +121,10 @@ export const PipelineUI = () => {
     size={1}
 />
                 <Controls />
-                <MiniMap nodeColor="#7c3aed" maskColor="rgba(0, 0, 0, 0.6)"/>
+                <MiniMap
+nodeColor="#7c3aed"
+maskColor="rgba(0,0,0,.6)"
+/>
             </ReactFlow>
             
         </div>
