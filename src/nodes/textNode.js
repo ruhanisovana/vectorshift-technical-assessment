@@ -52,7 +52,7 @@ export const TextNode = ({ id, data }) => {
         placeholder="Use {{variable}} to create inputs"
         style={{
           width: '100%',
-          minHeight: 60,
+          minHeight: 80,
           background: '#0f0f10',
           border: '1px solid #2a2a2b',
           color: 'white',
