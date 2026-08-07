@@ -44,6 +44,8 @@ const selector = (state) => ({
 export const PipelineUI = () => {
     const [reactFlowInstance, setReactFlowInstance] = useState(null);
     const { nodes, edges, getNodeID, addNode, onNodesChange, onEdgesChange, onConnect } = useStore(selector, shallow);
+    
+    const setNodes = useStore((state) => state.set
 
     const setValue = useCallback((nodeId, newData) => {
       useStore.setState((state) => ({
