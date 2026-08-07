@@ -47,17 +47,17 @@ export const PipelineToolbar = ({ onAddNode }) => {
   ]
 
   return (
-  <div  style={{
-  display: "flex",
-  gap: "10px",
-  padding: "14px",
-  background: "#111111",
-  borderBottom: "1px solid #2b2b2b",
-  flexWrap: "wrap",
-  justifyContent: "center",
-}}
-
-/>
+  <div
+  style={{
+    display: "flex",
+    gap: "10px",
+    padding: "14px",
+    background: "#111111",
+    borderBottom: "1px solid #2b2b2b",
+    flexWrap: "wrap",
+    justifyContent: "center",
+  }}
+>
     
       {NODE_LIST.map(n => (
         <PaletteNode 
