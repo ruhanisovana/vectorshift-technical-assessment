@@ -8,9 +8,15 @@ import {
   } from 'reactflow';
 
 export const useStore = create((set, get) => ({
+    nodeIDs: {},
     nodes:[],
     edges:[],
     setNodes: (nodes) => {
+    if (!Array.isArray(nodes)) {
+        console.error("Invalid nodes received:", nodes);
+        return;
+    }
+
     set({ nodes });
 },
 
