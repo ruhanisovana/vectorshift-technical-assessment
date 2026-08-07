@@ -1,16 +1,3 @@
-const btnBase = {
-  background: '#1a1a1b',
-  border: '1px solid #2a2a2b',
-  color: 'white',
-  padding: '8px 14px',
-  borderRadius: '6px',
-  cursor: 'pointer',
-  fontWeight: 500,
-  fontSize: '13px',
-  borderLeft: '3px solid',
-  minWidth: '90px',
-  userSelect: 'none'
-}
   
   const PaletteNode = ({ type, label, color, onClick }) => {
   return (
@@ -151,4 +138,3 @@ export const PipelineToolbar = ({ onAddNode }) => {
     </div>
   );
 };
-}
