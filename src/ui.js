@@ -124,8 +124,13 @@ export const PipelineUI = () => {
 showInteractive={false}
 />
                 <MiniMap
-nodeColor="#7c3aed"
-maskColor="rgba(0,0,0,.6)"
+  nodeColor="#7c3aed"
+  maskColor="rgba(0,0,0,0.75)"
+  style={{
+    background: "#171717",
+    border: "1px solid #2d2d2d",
+    borderRadius: "10px"
+  }}
 />
             </ReactFlow>
             
