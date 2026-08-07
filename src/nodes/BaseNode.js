@@ -5,7 +5,7 @@ export const BaseNode = ({ id, title, color = '#7c3aed', inputs = [], outputs = 
     <div style={{
       background: 'linear-gradient(180deg, #1a1a1b 0%, #131314 100%)',
       border: '1px solid #2a2a2b',
-      borderRadius: '8px',
+      borderRadius: '12px',
       padding: '0',
       width: '220px',
       minWidth: '220px',
