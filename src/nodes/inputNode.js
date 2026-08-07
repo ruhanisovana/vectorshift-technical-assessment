@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { BaseNode } from "./BaseNode";
 
 export const InputNode = ({ id, data }) => {
-  const [currName, setCurrName] = useState(data?.inputName || id.replace("customInput-", "input_"));
+  const [currName, setCurrName] = useState(data?.inputName || "");
   const [inputType, setInputType] = useState(data?.inputType || "Text");
 
   useEffect(() => {
