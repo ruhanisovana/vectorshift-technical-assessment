@@ -12,6 +12,7 @@ export const BaseNode = ({ id, title, color = '#7c3aed', inputs = [], outputs = 
       boxShadow: `0 0 0 1px ${color}33, 0 4px 12px rgba(0,0,0,0.4)`,
       color: 'white',
       fontSize: '13px',
+      transition: '0.2s',
       fontFamily: 'Inter, sans-serif',
       position: 'relative'
     }}>
