@@ -123,7 +123,8 @@ export const PipelineUI = () => {
         </div>
         
         
-            <SubmitButton nodes={nodesWithSetValue} edges={edges}/>
+            <SubmitButton nodes={nodesWithSetValue} edges={edges} setNodes={setNodes}
+
             
       </div>
     )
