@@ -16,7 +16,17 @@ const PaletteNode = ({ type, label, color, onClick }) => {
   return (
     <button
       onClick={() => onClick(type)}
-      style={{...btnBase, borderLeftColor: color}}
+      style={{
+    minWidth: "95px",
+    height: "42px",
+    borderRadius: "10px",
+    border: "1px solid #2d2d2d",
+    background: "#1a1a1b",
+    color: "white",
+    fontWeight: 600,
+    cursor: "pointer",
+    transition: "0.2s",
+}}
     >
       {label}
     </button>
