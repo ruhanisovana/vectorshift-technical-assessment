@@ -53,7 +53,12 @@ export const SubmitButton = ({ nodes, edges, setNodes }) => {
     console.log(data.nodes);
     alert(JSON.stringify(data.nodes, null, 2));
     
+    if (Array.isArray(data.nodes)) {
     setNodes(data.nodes);
+} else {
+    alert("Backend did not return nodes!");
+    console.log(data);
+    }
 
     console.log(data);
 
