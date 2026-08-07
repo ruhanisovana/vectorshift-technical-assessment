@@ -80,6 +80,13 @@ def parse_pipeline(data: PipelineData):
         if node["type"] == "output":
             node["data"]["value"] = result
 
+    print("===== BACKEND DEBUG =====")
+    print("INPUT:", input_text)
+    print("TEXT:", text_value)
+    print("RESULT:", result)
+    print("NODES:", nodes)
+    print("=========================")
+
     return {
         "num_nodes": len(nodes),
         "num_edges": len(edges),
