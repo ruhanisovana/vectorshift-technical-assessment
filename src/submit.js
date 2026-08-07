@@ -7,6 +7,8 @@ export const SubmitButton = ({ nodes, edges }) => {
   useEffect(() => { setMounted(true) }, []); // only render on client
 
   const handleSubmit = async () => {
+     alert("Button clicked!");
+     console.log("Button clicked!");
 
   const cleanNodes = nodes.map(n => {
     const { setValue, ...d } = n.data;
