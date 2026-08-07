@@ -105,7 +105,7 @@ zIndex:9999
 }}
 
     >
-      Submit Pipeline
+       Run Pipeline 
     </button>
   );
 
