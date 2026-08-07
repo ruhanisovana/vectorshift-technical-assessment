@@ -8,61 +8,57 @@ export const SubmitButton = ({ nodes, edges }) => {
     setMounted(true);
   }, []);
 
+
   const handleSubmit = async () => {
-    try {
-      alert("Button clicked");
 
-      const cleanNodes = nodes.map((n) => {
-        const { setValue, ...data } = n.data;
+  const cleanNodes = nodes.map((n) => {
+    const { setValue, ...data } = n.data;
 
-        return {
-          id: n.id,
-          type: n.type,
-          data,
-        };
-      });
+    return {
+      id: n.id,
+      type: n.type,
+      data,
+    };
+  });
 
-      const flow = {
-        nodes: cleanNodes,
-        edges,
-      };
-
-      console.log("FLOW =", flow);
-      alert(JSON.stringify(flow));
-
-      const response = await fetch(
-        "https://vectorshift-technical-assessment-2.onrender.com/pipelines/parse",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(flow),
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error(`Server returned ${response.status}`);
-      }
-
-      const data = await response.json();
-
-      console.log("Backend Response:", data);
-
-      alert(
-`Nodes: ${data.num_nodes}
-Edges: ${data.num_edges}
-DAG: ${data.is_dag}
-Input: ${data.input}
-Result: ${data.result}`
-      );
-
-    } catch (err) {
-      console.error(err);
-      alert("ERROR:\n" + err.message);
-    }
+  const flow = {
+    nodes: cleanNodes,
+    edges,
   };
 
+  try {
+
+    const res = await fetch(
+      "https://vectorshift-technical-assessment-2.onrender.com/pipelines/parse",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(flow),
+      }
+    );
+
+    if (!res.ok) {
+      throw new Error("Server Error");
+    }
+
+    const data = await res.json();
+
+    console.log(data);
+
+    alert(
+`Nodes : ${data.num_nodes}
+Edges : ${data.num_edges}
+DAG : ${data.is_dag}
+Input : ${data.input}
+Result : ${data.result}`
+    );
+
+  } catch (err) {
+    alert(err.message);
+  }
+};
   const button = (
     <button
       onClick={handleSubmit}
