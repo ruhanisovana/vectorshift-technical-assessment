@@ -74,7 +74,7 @@ def parse_pipeline(data: PipelineData):
     if "{{variables}}" in text_value:
     result = text_value.replace("{{variables}}", input_text)
 else:
-    result = f"{input_text} {text_value}".strip()
+    result = f"INPUT=[{input_text}] TEXT=[{text_value}]"
 
     for node in nodes:
         if node["type"] == "output":
