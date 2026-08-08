@@ -49,7 +49,7 @@ export const TextNode = ({ id, data }) => {
       <textarea
         value={currText}
         onChange={handleTextChange}
-        placeholder="Use {{variable}} to create inputs"
+        placeholder="Example: Hello {{name}}"
         style={{
           width: '100%',
           minHeight: 80,
