@@ -73,7 +73,7 @@ export const PipelineUI = () => {
     const getInitNodeData = (nodeID, type) => {
   if(type === 'text') return { id: nodeID, text: '' }
   if(type === 'input') return { id: nodeID, inputName: '', inputType: 'Text' } // NOW HAS DEFAULTS
-  if(type === 'output') return { id: nodeID, outputName: 'output_1', outputType: 'Text', value: 'Waiting for input...' }
+  if(type === 'output') return { id: nodeID, value: 'Waiting for input...' }
   return { id: nodeID };
 }
 
