@@ -120,9 +120,16 @@ export const PipelineUI = () => {
     gap={24}
     size={1}
 />
-                <Controls
-showInteractive={false}
-/>
+                <div
+  style={{
+    position: "absolute",
+    left: 10,
+    bottom: 90,
+    zIndex: 20
+  }}
+>
+  <Controls showInteractive={false} />
+</div>
                 <MiniMap
   nodeColor={(node) => {
     switch (node.type) {
