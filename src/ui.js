@@ -156,15 +156,18 @@ export const PipelineUI = () => {
     }
   }}
   maskColor="rgba(0,0,0,0.25)"
+style={{
+    width:170,
+    height:120,
+    right:15,
+    bottom:100,
+    background:"#222",
+    borderRadius:10,
+    border:"1px solid #555"
+}}
   pannable
   zoomable
-  style={{
-    width: 170,
-    height: 120,
-    background: "#222",
-    border: "1px solid #555",
-    borderRadius: 10
-  }}
+
 />
             </ReactFlow>
             
