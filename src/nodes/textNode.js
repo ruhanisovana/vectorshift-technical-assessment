@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { BaseNode } from "./BaseNode";
 
 export const TextNode = ({ id, data }) => {
-  const [currText, setCurrText] = useState(data?.text || '{{input}}');
+  const [currText, setCurrText] = useState(data?.text || "");
   const [variables, setVariables] = useState([]);
 
   // Save to store whenever currText changes
