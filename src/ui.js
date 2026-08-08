@@ -124,12 +124,39 @@ export const PipelineUI = () => {
 showInteractive={false}
 />
                 <MiniMap
-  nodeColor="#7c3aed"
-  maskColor="rgba(0,0,0,0.75)"
+  nodeColor={(node) => {
+    switch (node.type) {
+      case "input":
+        return "#6b7280";
+      case "llm":
+        return "#06b6d4";
+      case "text":
+        return "#7c3aed";
+      case "output":
+        return "#22c55e";
+      case "math":
+        return "#f59e0b";
+      case "image":
+        return "#ec4899";
+      case "database":
+        return "#3b82f6";
+      case "email":
+        return "#22c55e";
+      case "api":
+        return "#22c55e";
+      default:
+        return "#888";
+    }
+  }}
+  maskColor="rgba(0,0,0,0.25)"
+  pannable
+  zoomable
   style={{
-    background: "#171717",
-    border: "1px solid #2d2d2d",
-    borderRadius: "10px"
+    width: 170,
+    height: 120,
+    background: "#222",
+    border: "1px solid #555",
+    borderRadius: 10
   }}
 />
             </ReactFlow>
